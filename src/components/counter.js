@@ -4,13 +4,13 @@ import "./counter.css"
 const Counter = () => {
     const [counter, setCounter] = useState(0)
     const incrementHandler = () => {
-        setCounter(counter + 1)
+        setCounter(previousValue => previousValue + 1)
     }
     const resetHandler = () => {
         setCounter(0)
     }
     const decrementHandler = () => {
-        setCounter(counter - 1)
+        setCounter(previousValue => previousValue - 1)
     }
   return (
     <div className='container'>
